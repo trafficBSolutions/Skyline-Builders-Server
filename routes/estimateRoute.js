@@ -7,7 +7,7 @@ const { submitEstimate } = require('../controls/estimateControl');
 router.use(
     cors({
         credentials: true,
-        origin: 'https://eloquent-lamington-957e5e.netlify.app/'
+        origin: 'https://eloquent-lamington-957e5e.netlify.app'
     })
 );
 
