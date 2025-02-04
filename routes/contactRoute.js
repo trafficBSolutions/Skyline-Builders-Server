@@ -7,7 +7,7 @@ const { submitContact } = require('../controls/contactControl');
 router.use(
     cors({
         credentials: true,
-        origin: 'http://eloquent-lamington-957e5e.netlify.app'
+        origin: 'https://eloquent-lamington-957e5e.netlify.app'
     })
 );
 
