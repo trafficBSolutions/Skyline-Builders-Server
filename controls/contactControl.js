@@ -43,7 +43,7 @@ const submitContact = async (req, res) => {
                     font-size: 50px;
                     text-align: center;
                     font-family: 'Kairos W04 Extended Bold', Arial, Helvetica, sans-serif;
-                    color:#000000;"
+                    color:#ffffff;"
                     >Skyline Builders, LLC</h2>
                     </header>
                    
