@@ -7,7 +7,7 @@ const { submitContact } = require('../controls/contactControl');
 router.use(
     cors({
         credentials: true,
-        origin: 'https://skylinebuilders.netlify.app'
+        origin: 'https://www.skylinebuildersgallc.com'
     })
 );
 
