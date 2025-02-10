@@ -1,6 +1,6 @@
 const ContactUser = require('../users/contactUser');
 const transporter = require('../utils/emailConfig');
-const myEmail = 'tbsolutions9@gmail.com';
+const myEmail = 'patelterry75@gmail.com';
 const submitContact = async (req, res) => {
     try {
         const { first, last, company, email, phone, message } = req.body;
@@ -26,7 +26,7 @@ const submitContact = async (req, res) => {
 
         // Compose email options
         const mailOptions = {
-            from: 'Skyline Builders, LLC <tbsolutions9@gmail.com>',
+            from: 'Skyline Builders, LLC <patelterry75@gmail.com>',
             to: email,
             bcc: [
                 { name: 'Skyline Builders, LLC', address: myEmail },
