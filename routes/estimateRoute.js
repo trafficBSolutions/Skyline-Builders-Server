@@ -7,7 +7,7 @@ const { submitEstimate } = require('../controls/estimateControl');
 router.use(
     cors({
         credentials: true,
-        origin: 'https://skylinebuilders.netlify.app'
+        origin: 'https://www.skylinebuildersgallc.com'
     })
 );
 
