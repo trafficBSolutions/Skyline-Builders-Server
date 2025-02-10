@@ -1,5 +1,5 @@
 const EstimateUser = require('../users/estimateUsers');
-const myEmail = 'tbsolutions9@gmail.com';
+const myEmail = 'patelterry75@gmail.com';
 const transporter = require('../utils/emailConfig');
 const submitEstimate = async (req, res) => {
     try {
@@ -39,7 +39,7 @@ const submitEstimate = async (req, res) => {
                     message
                 });
         const mailOptions = {
-            from: 'Skyline Builders, LLC <tbsolutions9@gmail.com>',
+            from: 'Skyline Builders, LLC <patelterry75@gmail.com>',
             to: email,
             bcc: [
                 { name: 'Skyline Builders, LLC', address: myEmail },
