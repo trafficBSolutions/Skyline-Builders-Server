@@ -21,6 +21,24 @@ const transporter = nodemailer.createTransport({
         rejectUnauthorized: true
     }
 });
+require('dotenv').config(); // Load environment variables from .env
+
+const transporter2 = nodemailer.createTransport({
+    host: 'smtp.office365.com', // Outlook SMTP server
+    port: 587, // Use 587 for STARTTLS
+    secure: false, // Must be false for Outlook
+    logger: true,
+    debug: true,
+    auth: {
+        user: process.env.EMAIL_USER_2, // Your Outlook email
+        pass: process.env.EMAIL_PASS_2  // Your Outlook password or app password
+    },
+    tls: {
+        ciphers: 'SSLv3', // Required for Outlook
+        rejectUnauthorized: false // Sometimes needed for Office365
+    }
+});
 
 module.exports = 
-    transporter;
+    transporter,
+    transporter2;
