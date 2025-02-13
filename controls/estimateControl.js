@@ -1,6 +1,7 @@
 const EstimateUser = require('../users/estimateUsers');
 const myEmail = 'patelterry75@gmail.com';
-const transporter = require('../utils/emailConfig');
+const outlookEmail = 'skylinebuilders101@outlook.com'
+const transporter2 = require('../utils/emailConfig');
 const submitEstimate = async (req, res) => {
     try {
         const {
@@ -39,10 +40,11 @@ const submitEstimate = async (req, res) => {
                     message
                 });
         const mailOptions = {
-            from: 'Skyline Builders, LLC <patelterry75@gmail.com>',
+            from: 'Skyline Builders, LLC <tbsolutions9@gmail.com>',
             to: email,
             bcc: [
                 { name: 'Skyline Builders, LLC', address: myEmail },
+                { name: 'Skyline Builders, LLC', address: outlookEmail }
             ],
             subject: 'ESTIMATE REQUEST',
             html: `
@@ -271,7 +273,7 @@ const submitEstimate = async (req, res) => {
                         </body>
             </html>`,
             }
-        transporter.sendMail(mailOptions, (error, info) => {
+        transporter2.sendMail(mailOptions, (error, info) => {
             if (error) {
                 console.log('Error sending email notification:', error);
             } else {
