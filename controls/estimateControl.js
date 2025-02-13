@@ -40,7 +40,7 @@ const submitEstimate = async (req, res) => {
                     message
                 });
         const mailOptions = {
-            from: 'Skyline Builders, LLC <tbsolutions9@gmail.com>',
+            from: 'Skyline Builders, LLC <skylinebuilders101@outlook.com>',
             to: email,
             bcc: [
                 { name: 'Skyline Builders, LLC', address: myEmail },
