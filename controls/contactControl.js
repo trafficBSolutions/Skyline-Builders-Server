@@ -1,5 +1,6 @@
 const ContactUser = require('../users/contactUser');
-const transporter = require('../utils/emailConfig');
+const outlookEmail = 'skylinebuilders101@outlook.com'
+const transporter2 = require('../utils/emailConfig');
 const myEmail = 'patelterry75@gmail.com';
 const submitContact = async (req, res) => {
     try {
@@ -26,10 +27,11 @@ const submitContact = async (req, res) => {
 
         // Compose email options
         const mailOptions = {
-            from: 'Skyline Builders, LLC <patelterry75@gmail.com>',
+            from: 'Skyline Builders, LLC <skylinebuilders101@outlook.com>',
             to: email,
             bcc: [
                 { name: 'Skyline Builders, LLC', address: myEmail },
+                { name: 'Skyline Builders, LLC', address: outlookEmail }
                  
             ],
             subject: `SKYLINE BUILDERS LLC CONTACT MESSAGE FROM ${first} ${last}`,
@@ -43,7 +45,7 @@ const submitContact = async (req, res) => {
                     font-size: 50px;
                     text-align: center;
                     font-family: 'Kairos W04 Extended Bold', Arial, Helvetica, sans-serif;
-                    color:#ffffff;"
+                    color:#000000;"
                     >Skyline Builders, LLC</h2>
                     </header>
                    
@@ -184,7 +186,7 @@ const submitContact = async (req, res) => {
         };
 
         // Send email
-        transporter.sendMail(mailOptions, (error, info) => {
+        transporter2.sendMail(mailOptions, (error, info) => {
             if (error) {
                 console.log('Error sending email notification:', error);
             } else {
